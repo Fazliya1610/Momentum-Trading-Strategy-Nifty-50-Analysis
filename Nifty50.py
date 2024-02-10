@@ -90,7 +90,7 @@ def calculate_sharpe_ratio(df):
     daily_returns = df['Daily_Return'].dropna()
     avg_daily_return = daily_returns.mean()
     volatility = np.std(daily_returns) * np.sqrt(252)
-    risk_free_rate = 0.02  # Adjust as needed
+    risk_free_rate = 0.01  # Adjust as needed
     sharpe_ratio = (avg_daily_return - risk_free_rate) / volatility
     return sharpe_ratio
 
